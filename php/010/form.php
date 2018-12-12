@@ -1,6 +1,6 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { // superglobal to detect the method used
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     var_dump($_POST);
 
@@ -23,18 +23,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // superglobal to detect the method 
         title="Please enter a valid UK postcode">
     </div>
 
+  <div>
+        text: <input type="text" name="surname" value="Bloggs">
+    </div>
+    <textarea name="content" rows="7" cols="21"></textarea>
+
     <div>
-        email: <input type="email" name="email" required>
+        password: <input type="password" name="password">
     </div>
 
     <div>
-        url: <input type="url" name="url">
+        tel: <input type="tel" name="telephone">
     </div>
 
     <div>
-        number: <input type="number" name="count" min="1" max="10">
+        url: <input type="url" name="web_address">
     </div>
 
+    <div>
+        date: <input type="date" name="date">
+    </div>
+
+    <div>
+        time: <input type="time" name="time">
+    </div>
+
+    <div>
+        week: <input type="week" name="week">
+    </div>
+
+    <div>
+        color: <input type="color" name="colour">
+    </div>
+
+    <div>
+        email: <input type="email" name="email_address">
+    </div>
+
+    <div>
+        month: <input type="month" name="month">
+    </div>
+
+    <div>
+        range: <input type="range" name="range">
+    </div>
+
+    <div>
+        hidden: <input type="hidden" name="invisible" value="1234">
+    </div>
+
+    <div>
+        number: <input type="number" name="number">
+    </div>
+
+    <div>
+        search: <input type="search" name="search">
+    </div>
+
+    <div>
+        datetime-local: <input type="datetime-local" name="datetime">
+    </div>
+   
+	<select name="country">
+        <optgroup label="Europe">
+            <option value="germany">Germany</option>
+            <option value="france">France</option>
+            <option value="uk" selected>United Kingdom</option>
+        </optgroup>
+        <optgroup label="America">
+            <option value="brazil">Brazil</option>
+            <option value="canada">Canada</option>
+            <option value="usa">United States</option>
+        </optgroup>
+    </select>
+    
     <button>Send</button>
 
 </form>
