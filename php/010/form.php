@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div>
         text: <input type="text" name="surname" value="Bloggs">
     </div>
-    <textarea name="content" rows="7" cols="21"></textarea>
+    <textarea name="content" rows="7" cols="21" placeholder="Content"></textarea>
 
     <div>
         password: <input type="password" name="password">
@@ -72,9 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         hidden: <input type="hidden" name="invisible" value="1234">
     </div>
 
-    <div>
-        number: <input type="number" name="number">
-    </div>
+   
 
     <div>
         search: <input type="search" name="search">
@@ -96,9 +94,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <option value="usa">United States</option>
         </optgroup>
     </select>
+    <div><label><input type="checkbox" name="terms" value="yes">Terms</label></div>
+<fieldset>    
+<legend>Wich color do you like?</legend>
+    <div><input type="checkbox" name="red">red</div>
+    <div><input type="checkbox" name="blue">blue</div>
+    <div><input type="checkbox" name="green">green</div>
+    
+    <div><input type="checkbox" name="colours[]" value="red">red</div>
+    <div><input type="checkbox" name="colours[]" value="blue">blue</div>
+    <div><input type="checkbox" name="colours[]" value="green">green</div>
+    
+    <div><label><input type="radio" name="colour" value="red" >red</label></div>
+    <div><label><input type="radio" name="colour" value="blue" checked>blue</label></div>
+    <div><label><input type="radio" name="colour" value="green">green</label></div>
+
+	<div><label for="title">Title</label>: <input type="text" name="title" id="title"></div> 
+	<div><label for="event">Event</label>: <input type="text" name="event" id="event" value="snow retreat" readonly></div>
+    
+     <div>
+        number 18 to 21: <input type="number" required name="number" min="18" max="21" autofocus>
+    </div>
     
     <button>Send</button>
-
+</fieldset>
 </form>
 
 </body>
