@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Forms</title>
     <meta charset="utf-8">
 </head>
-<form method="post">
+<form method="post"	>
 
     <div>
         postcode: <input name="postcode"
