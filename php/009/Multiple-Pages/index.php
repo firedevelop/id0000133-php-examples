@@ -1,15 +1,14 @@
 <?php
-
 require 'includes/database.php';
 
 $sql = "SELECT *
-        FROM article
-        ORDER BY published_at;";
+        FROM cms
+        ORDER BY first_name;";
 
-$results = mysqli_query($conn, $sql);
+$results = mysqli_query($link, $sql);
 
 if ($results === false) {
-    echo mysqli_error($conn);
+    echo mysqli_error($link);   
 } else {
     $articles = mysqli_fetch_all($results, MYSQLI_ASSOC);
 }
@@ -25,8 +24,8 @@ if ($results === false) {
         <?php foreach ($articles as $article): ?>
             <li>
                 <article>
-                    <h2><a href="article.php?id=<?= $article['id']; ?>"><?= $article['title']; ?></a></h2>
-                    <p><?= $article['content']; ?></p>
+                    <h2><a href="article.php?id=<?= $article['id']; ?>"><?= $article['first_name']; ?></a></h2>
+                    <p><?= $article['last_name']; ?></p>
                 </article>
             </li>
         <?php endforeach; ?>

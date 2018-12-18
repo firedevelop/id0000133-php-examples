@@ -1,9 +1,9 @@
 <?php
 
 $db_host = "localhost";
+$db_user = "root";
+$db_pass = "123456";
 $db_name = "cms";
-$db_user = "cms_www";
-$db_pass = "64w6H2rOJ1zwLRyk";
 
 $link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 

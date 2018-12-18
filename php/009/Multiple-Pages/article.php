@@ -5,14 +5,14 @@ require 'includes/database.php';
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
     $sql = "SELECT *
-            FROM article
+            FROM cms
             WHERE id = " . $_GET['id'];
 
-    $results = mysqli_query($conn, $sql);
+    $results = mysqli_query($link, $sql);
 
     if ($results === false) {
 
-        echo mysqli_error($conn);
+        echo mysqli_error($link);
 
     } else {
 
@@ -32,8 +32,8 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 <?php else: ?>
 
     <article>
-        <h2><?= $article['title']; ?></h2>
-        <p><?= $article['content']; ?></p>
+        <h2><?= $article['first_name']; ?></h2>
+        <p><?= $article['last_name']; ?></p>
     </article>
 
 <?php endif; ?>
